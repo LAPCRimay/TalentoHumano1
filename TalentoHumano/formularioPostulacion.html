@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <title>FORMULARIO DE POSTULACION</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+<body>
+    
+    <section class="form_wrap">
+        
+        <section class="cantact_info">
+            <section class="info_title">
+                <span class="fa fa-user-circle"></span>
+                <h2>INFORMACION<br>DE CONTACTO</h2>
+            </section>
+            <section class="info_items">
+                <p><span class="fa fa-envelope"></span> info.contact@gmail.com</p>
+                <p><span class="fa fa-mobile"></span> +1(585) 902-8665</p>
+            </section>
+        </section>
+        
+        <form action="upload.php" method="post" class="form_contact" enctype="multipart/form-data">
+            <h2>Envia un mensaje</h2>
+            <div class="user_info">
+                
+                <label for="numeroIdentificacion">Numero Identificacion *</label>
+                <input type="text" id="numeroIdentificacion" name="numeroIdentificacion" maxlength="13">
+                
+                <label for="nombre1">Primer Nombre *</label>
+                <input type="text" id="nombre1" name="nombre1">
+                
+                <label for="nombre2">Segundo Nombre </label>
+                <input type="text" id="nombre2" name="nombre2">
+                
+                <label for="apellido1">Primer Apellido: *</label>
+                <input type="text" id="apellido1" name="apellido1">
+                
+                <label for="apellido2">Segundo Apellido: *</label>
+                <input type="text" id="apellido2" name="apellido2">
+                
+                <label for="fechaNacimiento">Fecha Nacimiento</label>
+                <input type="date" id="fechaNacimiento" min="1950-01-01" name="fechaNacimiento">
+                
+                <label for="correo">Correo electronico *</label>
+                <input type="email" id="correo" name="correo">
+                
+                <label for="telefono">Telefono/Celular</label>
+                <input type="text" id="telefono">
+                
+                <label for="arcCV">Curriculum Vitae: *</label>
+                <input name="userfile" type="file" id="arcCV">
+                
+                <label for="cargo">Cargo:</label>
+                <select class="form-control" id="cargo" name="cargo">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+                
+                <input type="submit" value="Enviar" id="btnSend">
+                <a href="/TalentoHumano/formularioPostulacion.html" class="btn btn-success">Cancelar</a>
+            </div>
+        </form>
+        
+    </section>
+    
+</body>
+</html>
