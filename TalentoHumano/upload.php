@@ -1,4 +1,5 @@
 <?php
+header("Content-Type: text/html;charset=utf-8");
 // Configuracion
 require_once 'configuracion.php';
 session_start();
@@ -18,7 +19,7 @@ $filename = strtolower($_FILES['userfile']['name']); // toma el nombre del archi
     
     
 if(!$filename || $filename==""){ // mira si no se ha seleccionado ning�n archivo
-   $error = "- Ning�n archivo selecccionado para subir.<br>";
+   $error = "- Ningún archivo selecccionado para subir.<br>";
 }elseif(file_exists($folder.$filename) && $overwrite=="no"){ // comprueba si el archivo existe ya
    $error = "- El archivo <b>$filename</b> ya existe<br>";
 }
@@ -88,7 +89,10 @@ if($bool){
 }
 
 //ENVIAR CORREO A GERENTE TALENTO HUMANO
-$mail = "Estimad@, ha llegado una nueva postulacion de: ".$nombre1." ".$apellido1." Por favor tu revision en el siguiente enlace:";
+/*$mail = "Estimad@, ha llegado una nueva postulacion de: ".$nombre1." ".$apellido1." Por favor tu revision en el siguiente enlace:".
+        "http://".'$dominio'."/TalentoHumano/revisionInformacion";*/
+$mail = "Estimad@, ha llegado una nueva postulacion de: ".$nombre1." ".$apellido1." Por favor tu revision en el siguiente enlace:"
+		." http://localhost/TalentoHumano/revisionInformacion.php?id=$numeroIdentificacion" ;
 //Titulo
 $titulo = "INFORMACION RECIBIDA";
 //cabecera
