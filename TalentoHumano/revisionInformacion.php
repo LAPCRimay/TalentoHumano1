@@ -27,7 +27,8 @@ if ($datoConsultado) //Si existe esa postal la muestro
 
 </table>
 <!--<div align="center"><a href=<?php "descarga.php?id=".$datoConsultado["curriculum_vitae"];?>>Descargar PDF</a></div> -->
-<div align="center"><a href=<?php "descarga.php";?>>Descargar PDF</a></div>
+<?php $id=$_POST['$datoConsultado["curriculum_vitae"]']?>
+<div align="center"><a href=<?php "http://localhost/TalentoHumano/descarga.php?id=$id"; ?>>Descargar PDF</a></div>
 
 <?php
 //ENVIANDO UN CORREO
