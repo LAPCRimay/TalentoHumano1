@@ -37,41 +37,41 @@ if ($datoConsultado) //Si existe esa postal la muestro
   <fieldset disabled>
     <div class="form-group">
       <label for="disabledTextInput">Número Identificación*:</label>
-      <input type="text" id="numeroIdentificacion" class="form-control" placeholder="Disabled input">
+      <input type="text" id="numeroIdentificacion" class="form-control" value=<?php echo $datoConsultado["numero_identificacion"]?>>
     </div>
     <div class="form-group">
       <label for="disabledTextInput">Primer Nombre*:</label>
-      <input type="text" id="nombre1" class="form-control" placeholder="Disabled input">
+      <input type="text" id="nombre1" class="form-control" value=<?php echo $datoConsultado["nombre_1"]?> >
     </div>
     <div class="form-group">
       <label for="disabledTextInput">Segundo Nombre:</label>
-      <input type="text" id="nombre2" class="form-control" placeholder="Disabled input">
+      <input type="text" id="nombre2" class="form-control" value=<?php echo $datoConsultado["nombre_2"]?> >
     </div>
     <div class="form-group">
       <label for="disabledTextInput">Primer Apellido*:</label>
-      <input type="text" id="apellido1" class="form-control" placeholder="Disabled input">
+      <input type="text" id="apellido1" class="form-control" value=<?php echo $datoConsultado["apellido_1"]?> >
     </div> 
     <div class="form-group">
       <label for="disabledTextInput">Segundo Apellido:</label>
-      <input type="text" id="apellido2" class="form-control" placeholder="Disabled input">
+      <input type="text" id="apellido2" class="form-control" value=<?php echo $datoConsultado["apellido_2"]?> >
     </div>
     <div class="form-group">
       <label for="disabledTextInput">Fecha Nacimiento:</label>
-      <input type="date" id="fechaNacimiento" class="form-control" placeholder="Disabled input">
+      <input type="date" id="fechaNacimiento" class="form-control" value=<?php echo $datoConsultado["fecha_nacimiento"]?> >
     </div>
     <div class="form-group">
       <label for="disabledTextInput">Correo electrónico:</label>
-      <input type="email" id="correo" class="form-control" placeholder="Disabled input">
+      <input type="email" id="correo" class="form-control" value=<?php echo $datoConsultado["correo_electronico"]?> >
     </div>
     <div class="form-group">
       <label for="disabledTextInput">Teléfono/Celular: </label>
-      <input type="text" id="correo" class="form-control" placeholder="Disabled input">
+      <input type="text" id="correo" class="form-control" value=<?php echo $datoConsultado["telefono"]?> >
     </div>  
     
    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
+      <input class="form-check-input" type="checkbox" id="informacionCorrecta">
       <label class="form-check-label" for="disabledFieldsetCheck">
-        Can't check this
+        Información Correcta?
       </label>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
