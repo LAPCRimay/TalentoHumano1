@@ -5,7 +5,7 @@
  * and open the template in the editor.
  */
 //Inicializar datos generales
-$rutaAlmacenamiento='C:\\\\uploads\\';
+$rutaAlmacenamiento='C:\\uploads\\';
 $servidor='localhost';
 $usuario='usrtalento';
 $contrasena='KzLPMpwHpfZ7VHdg';
@@ -15,7 +15,7 @@ $correoTalentoHumano="lorepadilla0@gmail.com";
 //Conectar con la base de datos
   $conexion = new mysqli($servidor,$usuario,$contrasena);
    //Verificar la conexion
-   if(!$conexion){
+   if(!$conexion->set_charset('utf8')){
        echo("No se pudo conectar con el servidor");
    }else{
        $base = mysqli_select_db($conexion,$baseDatos);

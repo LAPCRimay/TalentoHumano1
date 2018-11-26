@@ -1,5 +1,7 @@
 <?php
-header("Content-disposition: attachment; filename=c:\uploads\iesspdf.pdf");
+$rutaDescarga = $_GET['id'];
+echo "ruta descarga: $rutaDescarga";
+header("Content-disposition: attachment; filename=".$rutaDescarga);
 header("Content-type: application/pdf");
-readfile("c:\uploads\iesspdf.pdf");
+readfile($rutaDescarga);
 ?>
